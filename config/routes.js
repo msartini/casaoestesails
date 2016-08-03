@@ -44,7 +44,9 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'get /usuario/listagem': 'UserController.list'
+  'get /usuario/listagem': 'UserController.list',
+
+  'get /usuario/find': 'UserController.find',
 
   /***************************************************************************
   *                                                                          *

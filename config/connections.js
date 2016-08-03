@@ -49,6 +49,15 @@ module.exports.connections = {
      database: 'apicasaoeste' //optional
   },
 
+  laravelMysqlServer: {
+     adapter: 'sails-mysql',
+     host: 'localhost',
+     port: '3306',
+     user: 'root', //optional
+     password: '12345', //optional
+     database: 'laravel' //optional
+  },
+
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *
