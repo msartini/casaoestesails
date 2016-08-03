@@ -22,6 +22,14 @@
 
 module.exports.routes = {
 
+  /**
+  *Translate default
+  *****/
+  '/*': function(req, res, next) {
+        res.setLocale(req.param('lang') || sails.config.i18n.defaultLocale);
+        return next();
+  },
+
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
@@ -34,7 +42,9 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  'get /usuario/listagem': 'UserController.list'
 
   /***************************************************************************
   *                                                                          *
